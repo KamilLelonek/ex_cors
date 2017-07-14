@@ -1,5 +1,7 @@
 # ex_cors
 
+[![Build Status](https://travis-ci.org/KamilLelonek/ex_cors.svg?branch=master)](https://travis-ci.org/KamilLelonek/ex_cors)
+
 An Elixir Plug-based CORS middleware for Phoenix Framework.
 
 ## Installation

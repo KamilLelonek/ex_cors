@@ -27,7 +27,7 @@ defmodule ExCors.Mixfile do
 
   defp description do
     """
-      A Plug-based CORS middleware.
+      An Elixir Plug-based CORS middleware for Phoenix Framework.
     """
   end
 

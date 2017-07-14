@@ -1,6 +1,6 @@
 # ex_cors
 
-A Plug-based CORS middleware.
+An Elixir Plug-based CORS middleware for Phoenix Framework.
 
 ## Installation
 
@@ -18,3 +18,16 @@ end
 After you're done, run `mix deps.get` in your terminal to fetch and compile all dependencies.
 
 ## Usage
+
+`ex_cors` is intended to work with `Phoenix.Enpoint`. The only thing you have to do in order to make it working is to modify `your_app/lib/your_app/web/endpoint.ex` as follows:
+
+```elixir
+defmodule YourApp.Endpoint do
+  use Phoenix.Enpoint, otp_app: :your_app
+
+  # ...
+  plug ExCors.AllowCorsRequests
+  plug YourApp.Router
+  # ...
+end
+```

@@ -62,11 +62,14 @@ defmodule ExCors.AllowCorsRequestsTest do
     :get
     |> conn("/", nil)
     |> put_req_header(header, value)
-    |> AllowCorsRequests.call(init(config))
+    |> call_with_config(config)
   end
 
   defp call(method \\ :get, config \\ []),
-    do: method |> conn("/") |> AllowCorsRequests.call(init(config))
+    do: method |> conn("/") |> call_with_config(config)
+
+  defp call_with_config(conn, config),
+    do: AllowCorsRequests.call(conn, init(config))
 
   defp init(config),
     do: AllowCorsRequests.init(config)

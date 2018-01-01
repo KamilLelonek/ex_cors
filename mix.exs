@@ -4,8 +4,8 @@ defmodule ExCors.Mixfile do
   def project do
     [
       app:             :ex_cors,
-      version:         "0.1.0",
-      elixir:          "~> 1.4",
+      version:         "0.2.0",
+      elixir:          "~> 1.5",
       build_embedded:  Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       description:     description(),
@@ -20,8 +20,8 @@ defmodule ExCors.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.16.2", runtime: false},
-      {:plug, "~> 1.3"},
+      {:ex_doc, "~> 0.18", runtime: false},
+      {:plug, "~> 1.4"},
     ]
   end
 

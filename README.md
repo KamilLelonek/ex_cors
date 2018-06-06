@@ -11,7 +11,7 @@ The package can be installed by adding `ex_cors` to your list of dependencies in
 ```elixir
 def deps do
   [
-    {:ex_cors, "~> 0.2.0"},
+    {:ex_cors, "~> 0.2"},
     # ...
   ]
 end

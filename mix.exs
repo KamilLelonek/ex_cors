@@ -3,14 +3,14 @@ defmodule ExCors.Mixfile do
 
   def project do
     [
-      app:             :ex_cors,
-      version:         "0.2.0",
-      elixir:          "~> 1.5",
-      build_embedded:  Mix.env == :prod,
-      start_permanent: Mix.env == :prod,
-      description:     description(),
-      package:         package(),
-      deps:            deps(),
+      app: :ex_cors,
+      version: "0.2.1",
+      elixir: "~> 1.5",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
+      deps: deps()
     ]
   end
 
@@ -20,8 +20,8 @@ defmodule ExCors.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.18", runtime: false},
-      {:plug, "~> 1.4"},
+      {:ex_doc, "~> 0.18", runtime: false, optional: true},
+      {:plug, "~> 1.4"}
     ]
   end
 
@@ -33,14 +33,14 @@ defmodule ExCors.Mixfile do
 
   defp package do
     [
-     name:        :ex_cors,
-     files:       ["lib", "config", "mix.exs", "README.md"],
-     maintainers: ["Kamil Lelonek"],
-     licenses:    ["Apache 2.0"],
-     links: %{
-       "GitHub" => "https://github.com/KamilLelonek/ex_cors",
-       "Docs"   => "https://hexdocs.pm/ex_cors/",
-     },
+      name: :ex_cors,
+      files: ["lib", "config", "mix.exs", "README.md"],
+      maintainers: ["Kamil Lelonek"],
+      licenses: ["Apache 2.0"],
+      links: %{
+        "GitHub" => "https://github.com/KamilLelonek/ex_cors",
+        "Docs" => "https://hexdocs.pm/ex_cors/"
+      }
     ]
   end
 end
